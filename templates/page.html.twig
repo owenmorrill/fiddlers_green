@@ -57,45 +57,6 @@
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-{# Navbar #}
-{% if page.navigation or page.navigation_collapsible %}
-    {% block navbar %}
-        {%
-        set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-        ]
-        %}
-      <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-          {% if not navbar_attributes.hasClass('container') %}
-        <div class="{{ container }}">
-            {% endif %}
-          <div class="navbar-header">
-              {{ page.navigation }}
-              {# .btn-navbar is used as the toggle for collapsed navbar content #}
-              {% if page.navigation_collapsible %}
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                  <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              {% endif %}
-          </div>
-
-            {# Navigation (collapsible) #}
-            {% if page.navigation_collapsible %}
-              <div id="navbar-collapse" class="navbar-collapse collapse">
-                  {{ page.navigation_collapsible }}
-              </div>
-            {% endif %}
-            {% if not navbar_attributes.hasClass('container') %}
-        </div>
-          {% endif %}
-      </header>
-    {% endblock %}
-{% endif %}
 
 {# Main #}
 {% block main %}
@@ -103,20 +64,69 @@
     <div class="row">
 
         {# Header #}
-        {% if page.header %}
-            {% block header %}
-              <div class="col-sm-12" role="heading">
-                  {{ page.header }}
-              </div>
-            {% endblock %}
-        {% endif %}
+        <header class="clearfix">
+            {% if page.branding %}
+                {% block branding %}
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" role="branding">
+                        {{ page.branding }}
+                    </div>
+                {% endblock %}
+            {% endif %}
+            {% if page.search_box %}
+                {% block search_box %}
+                  <div class="col-lg-4 col-md-4" role="search">
+                      {{ page.search_box }}
+                  </div>
+                {% endblock %}
+            {% endif %}
+        </header>
+        <nav class="clearfix">
+            {# Navbar #}
+            {% if page.menu or page.menu_collapsible %}
+                {% block navbar %}
+                    {%
+                    set navbar_classes = [
+                    'navbar',
+                    theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+                    theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+                    ]
+                    %}
+                    <div{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+                        {% if not navbar_attributes.hasClass('container') %}
+                        <div class="{{ container }}">
+                            {% endif %}
+                            <div class="navbar-header">
+                                {{ page.menu }}
+                                {# .btn-navbar is used as the toggle for collapsed navbar content #}
+                                {% if page.menu_collapsible %}
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">{{ 'Toggle menu'|t }}</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                {% endif %}
+                            </div>
 
+                            {# Menu (collapsible) #}
+                            {% if page.menu_collapsible %}
+                                <div id="navbar-collapse" class="navbar-collapse collapse">
+                                    {{ page.menu_collapsible }}
+                                </div>
+                            {% endif %}
+                            {% if not navbar_attributes.hasClass('container') %}
+                        </div>
+                        {% endif %}
+                    </div>
+                {% endblock %}
+            {% endif %}
+        </nav>
         {# Sidebar First #}
         {% if page.sidebar_first %}
             {% block sidebar_first %}
-              <aside class="col-sm-3" role="complementary">
-                  {{ page.sidebar_first }}
-              </aside>
+                <aside class="col-sm-3" role="complementary">
+                    {{ page.sidebar_first }}
+                </aside>
             {% endblock %}
         {% endif %}
 
@@ -183,5 +193,13 @@
       <footer class="footer {{ container }}" role="contentinfo">
           {{ page.footer }}
       </footer>
+    {% endblock %}
+{% endif %}
+
+{% if page.site_info %}
+    {% block site_info %}
+        <div class="block-cu-site-info {{ container }}" role="site_info">
+            {{ page.site_info }}
+        </div>
     {% endblock %}
 {% endif %}
