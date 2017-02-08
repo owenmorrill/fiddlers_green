@@ -188,18 +188,24 @@
   </div>
 {% endblock %}
 
-{% if page.footer %}
-    {% block footer %}
-      <footer class="footer {{ container }}" role="contentinfo">
-          {{ page.footer }}
-      </footer>
-    {% endblock %}
-{% endif %}
+{% block footer %}
+  <footer class="footer {{ container }}" role="contentinfo">
+      {{ page.footer }}
 
-{% if page.site_info %}
-    {% block site_info %}
-        <div class="block-cu-site-info {{ container }}" role="site_info">
-            {{ page.site_info }}
-        </div>
-    {% endblock %}
-{% endif %}
+      {% if page.site_info %}
+          {% block site_info %}
+              <div class="block-cu-site-info {{ container }}" role="site_info">
+                  {{ page.site_info }}
+              </div>
+          {% endblock %}
+      {% endif %}
+
+      <div id="cu-footer" class="col-lg-4 col-md-4">
+          <p><a href="//www.colorado.edu"><img src="http://www.colorado.edu/webcentral/profiles/express/themes/expressbase/images/beboulder/be-boulder-white.png" alt="University of Colorado Boulder" class="beboulder"/></a></p>
+          <p><strong><a href="http://www.colorado.edu">University of Colorado Boulder</a></strong><br />&copy; Regents of the University of Colorado<br />
+              <span class="required-links"><a href="http://www.colorado.edu/about/privacy-statement">Privacy</a> &bull; <a href="http://www.colorado.edu/about/legal-trademarks">Legal &amp; Trademarks</a></span></p>
+      </div>
+  </footer>
+{% endblock %}
+
+

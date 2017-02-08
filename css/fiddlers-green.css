@@ -1,3 +1,8 @@
+/* line 3, ../scss/_main_styles.scss */
+footer a, footer a:link, footer a:visited {
+  color: #cfb87c !important;
+}
+
 /* line 1, ../scss/components/_blocks.scss */
 .block {
   margin-bottom: 20px;
