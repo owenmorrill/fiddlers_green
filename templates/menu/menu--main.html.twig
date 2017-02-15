@@ -28,6 +28,7 @@
   {% if items %}
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav') }}>
+        <li class="main-menu-item home"><a href="{{ path('<front>') }}"><span class="glyphicon glyphicon-home"></span><p class="sr-only">Home</p></a></li>
     {% else %}
       <ul{{ attributes.addClass('dropdown-menu') }}>
     {% endif %}
@@ -36,6 +37,7 @@
         set item_classes = [
           'expanded',
           'dropdown',
+          'main-menu-item',
           item.in_active_trail ? 'active',
         ]
       %}

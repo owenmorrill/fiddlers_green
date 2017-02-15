@@ -4,4 +4,6 @@ global-styling:
     theme:
       css/fiddlers-green.css: {}
   js:
-    js/fiddlers_green.css: {}
+    js/fiddlers_green.js: {}
+  dependencies:
+    - core/jquery

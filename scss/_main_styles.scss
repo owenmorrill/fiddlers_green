@@ -1,6 +1,117 @@
-footer {
+// GLOBAL HTML/BODY
+html {
+  background: $bg_dark1;
+}
+body {
+  margin-top: 0;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// Literally too lazy to track this down. Deal with it.
+.toolbar-menu > li > a:visited {
+  color: #565656 !important;
+}
+
+// HEADER
+header {
+  margin: 0;
+  padding: 2% 6%;
+  background: $bg_dark1;
+  width: 100%;
+
+  section, p {
+    color: $text_white;
+  }
+
+  a, a:link, a:visited {
+    color: $text_white;
+  }
+}
+
+.culinks {
+  color: $text_white;
+  font-size: small;
+  float: right;
+}
+
+// NAV
+.home {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.navbar-default {
+  background: $real_white;
+  border-bottom: 1px solid gray;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: $cugold;
+  color: $bg_dark1;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $bg_dark1;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: $bg_dark1;
+  background-color: $cugold;
+}
+
+.main-menu-item {
+  color: $gray;
+  line-height: 64px;
+  font-weight: 600;
+  border-right: 1px solid $gray;
+  padding: 0 12px;
+
+  &:link {
+    background-color: $real_white;
+    color: $bg_dark1;
+  }
+  &:hover,
+  &:focus,
+  &.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: $cugold;
+    color: $bg_dark1;
+  }
+  &:active, &.active, a:active {
+    background-color: $cugold;
+    color: $bg_dark1;
+  }
+}
+
+// FOOTER
+.footer {
+  margin: 0;
+  padding: 2% 6%;
+  background: $bg_dark1;
+  width: 100%;
+
+  section, p {
+    color: $text_white;
+  }
 
   a, a:link, a:visited {
     color: $cugold !important;
   }
+}
+
+// CONTENT/SECTION
+section {
+  margin-bottom: 2%;
+}
+
+// BUTTONS
+.btn-primary {
+  color: $text_white;
+  background-color: $cugold;
+  border-color: $cugold;
+}
+.btn:focus,.btn:active {
+  outline: none !important;
 }
