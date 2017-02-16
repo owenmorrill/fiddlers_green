@@ -6,7 +6,7 @@ html {
 }
 
 .element-invisible {
-  @include element-invisible;
+  display: none;
 }
 
 #skip-link {
@@ -106,7 +106,7 @@ html {
   height: auto;
 }
 .node-view-mode-sidebar-content {
-  @include clearfloats;
+  //@include clearfloats;
   overflow: hidden;
 }
 .node-view-mode-embed {
