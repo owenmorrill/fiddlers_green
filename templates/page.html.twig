@@ -3,20 +3,22 @@
 <div class="header-nav">
   {# Header #}
   <header class="clearfix">
-    {% if page.branding %}
-      {% block branding %}
-        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" role="branding">
-          {{ page.branding }}
-        </div>
-      {% endblock %}
-    {% endif %}
-    {% if page.search_box %}
-      {% block search_box %}
-        <div class="col-lg-4 col-md-4" role="search">
-          {{ page.search_box }}
-        </div>
-      {% endblock %}
-    {% endif %}
+    <div id="site-info">
+      {% if page.branding %}
+        {% block branding %}
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" role="branding">
+            {{ page.branding }}
+          </div>
+        {% endblock %}
+      {% endif %}
+      {% if page.search_box %}
+        {% block search_box %}
+          <div class="col-lg-4 col-md-4" role="search">
+            {{ page.search_box }}
+          </div>
+        {% endblock %}d
+      {% endif %}
+    </div>
   </header>
   <nav class="clearfix">
       {# Navbar #}
@@ -133,21 +135,23 @@
 
 {% block footer %}
   <footer class="footer {{ container }}" role="contentinfo">
+    <div id="footer-info">
       {{ page.footer }}
 
       {% if page.site_info %}
-          {% block site_info %}
-              <div class="block-cu-site-info col-lg-8 col-md-8 {{ container }}" role="site_info">
-                  {{ page.site_info }}
-              </div>
-          {% endblock %}
+        {% block site_info %}
+          <div class="block-cu-site-info col-lg-8 col-md-8 {{ container }}" role="site_info">
+            {{ page.site_info }}
+          </div>
+        {% endblock %}
       {% endif %}
 
-      <div id="cu-footer" class="col-lg-4 col-md-4">
-          <p><a href="//www.colorado.edu"><img src="http://www.colorado.edu/webcentral/profiles/express/themes/expressbase/images/beboulder/be-boulder-white.png" alt="University of Colorado Boulder" class="beboulder"/></a></p>
-          <p><strong><a href="http://www.colorado.edu">University of Colorado Boulder</a></strong><br />&copy; Regents of the University of Colorado<br />
-              <span class="required-links"><a href="http://www.colorado.edu/about/privacy-statement">Privacy</a> &bull; <a href="http://www.colorado.edu/about/legal-trademarks">Legal &amp; Trademarks</a></span></p>
+      <div id="cu-footer" class="col-lg-4 col-md-4 pull-right">
+        <p><a href="//www.colorado.edu"><img src="http://www.colorado.edu/webcentral/profiles/express/themes/expressbase/images/beboulder/be-boulder-white.png" alt="University of Colorado Boulder" class="beboulder"/></a></p>
+        <p><strong><a href="http://www.colorado.edu">University of Colorado Boulder</a></strong><br />&copy; Regents of the University of Colorado<br />
+          <span class="required-links"><a href="http://www.colorado.edu/about/privacy-statement">Privacy</a> &bull; <a href="http://www.colorado.edu/about/legal-trademarks">Legal &amp; Trademarks</a></span></p>
       </div>
+    </div>
   </footer>
 {% endblock %}
 

@@ -22,8 +22,8 @@ a:link, a:visited, a {
 // HEADER
 header {
   margin: 0;
-  padding: 2% 6%;
-  background: $bg_dark1;
+  padding: 1% 6% 0 6%;
+  background: $real_black;
   width: 100%;
 
   section, p {
@@ -33,6 +33,16 @@ header {
   a, a:link, a:visited {
     color: $text_white;
   }
+
+  #site-info {
+    display: block;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+}
+
+.logo img {
+  width: 64px;
 }
 
 .culinks {
@@ -49,7 +59,7 @@ header {
 
 .navbar-default {
   background: $real_white;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 .navbar-default .navbar-nav > .active > a {
@@ -70,8 +80,8 @@ header {
   color: $gray;
   line-height: 64px;
   font-weight: 600;
-  border-right: 1px solid $gray;
-  padding: 0;
+  border-right: 1px solid #d7d7d7;
+  padding: 6px 0px !important;
 
   &:link {
     background-color: $real_white;
@@ -93,7 +103,7 @@ header {
 .footer {
   margin: 0;
   padding: 2% 6%;
-  background: $bg_dark1;
+  background: $real_black;
   width: 100%;
 
   section, p {
@@ -102,6 +112,12 @@ header {
 
   a, a:link, a:visited {
     color: $cugold !important;
+  }
+
+  #footer-info {
+    display: block;
+    max-width: 1160px;
+    margin: 0 auto;
   }
 }
 
