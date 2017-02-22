@@ -12,121 +12,240 @@ body img {
   max-width: 100%;
 }
 
-/* line 14, ../scss/_main_styles.scss */
+/* line 13, ../scss/_main_styles.scss */
+a:link, a:visited, a {
+  color: #007BC8;
+}
+
+/* line 18, ../scss/_main_styles.scss */
 .toolbar-menu > li > a:visited {
   color: #565656 !important;
 }
 
-/* line 19, ../scss/_main_styles.scss */
+/* line 23, ../scss/_main_styles.scss */
 header {
   margin: 0;
   padding: 2% 6%;
   background: #272727;
   width: 100%;
 }
-/* line 25, ../scss/_main_styles.scss */
+/* line 29, ../scss/_main_styles.scss */
 header section, header p {
   color: #FFFFFF;
 }
-/* line 29, ../scss/_main_styles.scss */
+/* line 33, ../scss/_main_styles.scss */
 header a, header a:link, header a:visited {
   color: #FFFFFF;
 }
 
-/* line 34, ../scss/_main_styles.scss */
+/* line 38, ../scss/_main_styles.scss */
 .culinks {
   color: #FFFFFF;
   font-size: small;
   float: right;
 }
 
-/* line 41, ../scss/_main_styles.scss */
+/* line 45, ../scss/_main_styles.scss */
 .home {
   margin: 0;
   padding: 0 !important;
 }
 
-/* line 46, ../scss/_main_styles.scss */
+/* line 50, ../scss/_main_styles.scss */
 .navbar-default {
   background: #FFFFFF;
   border-bottom: 1px solid gray;
 }
 
-/* line 51, ../scss/_main_styles.scss */
+/* line 55, ../scss/_main_styles.scss */
 .navbar-default .navbar-nav > .active > a {
   background-color: #cfb87c;
   color: #272727;
 }
 
-/* line 56, ../scss/_main_styles.scss */
+/* line 60, ../scss/_main_styles.scss */
 .navbar-default .navbar-nav > li > a {
   color: #272727;
 }
 
-/* line 60, ../scss/_main_styles.scss */
+/* line 64, ../scss/_main_styles.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #272727;
   background-color: #cfb87c;
 }
 
-/* line 65, ../scss/_main_styles.scss */
+/* line 69, ../scss/_main_styles.scss */
 .main-menu-item {
   color: #757575;
   line-height: 64px;
   font-weight: 600;
   border-right: 1px solid #757575;
-  padding: 0 12px;
+  padding: 0;
 }
-/* line 72, ../scss/_main_styles.scss */
+/* line 76, ../scss/_main_styles.scss */
 .main-menu-item:link {
   background-color: #FFFFFF;
   color: #272727;
 }
-/* line 76, ../scss/_main_styles.scss */
+/* line 80, ../scss/_main_styles.scss */
 .main-menu-item:hover, .main-menu-item:focus, .main-menu-item.navbar-default .navbar-nav > .active > a, .main-menu-item .navbar-default .navbar-nav > .active > a:hover, .main-menu-item .navbar-default .navbar-nav > .active > a:focus {
   background-color: #cfb87c;
   color: #272727;
 }
-/* line 82, ../scss/_main_styles.scss */
+/* line 86, ../scss/_main_styles.scss */
 .main-menu-item:active, .main-menu-item.active, .main-menu-item a:active {
   background-color: #cfb87c;
   color: #272727;
 }
 
-/* line 89, ../scss/_main_styles.scss */
+/* line 93, ../scss/_main_styles.scss */
 .footer {
   margin: 0;
   padding: 2% 6%;
   background: #272727;
   width: 100%;
 }
-/* line 95, ../scss/_main_styles.scss */
+/* line 99, ../scss/_main_styles.scss */
 .footer section, .footer p {
   color: #FFFFFF;
 }
-/* line 99, ../scss/_main_styles.scss */
+/* line 103, ../scss/_main_styles.scss */
 .footer a, .footer a:link, .footer a:visited {
   color: #cfb87c !important;
 }
 
-/* line 105, ../scss/_main_styles.scss */
+/* line 109, ../scss/_main_styles.scss */
 section {
   margin-bottom: 2%;
 }
 
-/* line 110, ../scss/_main_styles.scss */
+/* line 133, ../scss/_main_styles.scss */
 .btn-primary {
   color: #FFFFFF;
+  background-color: #007BC8;
+  border-color: #007BC8;
+}
+/* line 119, ../scss/_main_styles.scss */
+.btn-primary:hover, .btn-primary:focus {
+  color: #FFFFFF;
+  background-color: #0072b9;
+  border-color: #007BC8;
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+/* line 128, ../scss/_main_styles.scss */
+.btn-primary:active {
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+
+/* line 137, ../scss/_main_styles.scss */
+.btn-secondary {
+  color: #202020;
   background-color: #cfb87c;
   border-color: #cfb87c;
 }
-
-/* line 115, ../scss/_main_styles.scss */
-.btn:focus, .btn:active {
-  outline: none !important;
+/* line 119, ../scss/_main_styles.scss */
+.btn-secondary:hover, .btn-secondary:focus {
+  color: #202020;
+  background-color: #cbb271;
+  border-color: #cfb87c;
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+/* line 128, ../scss/_main_styles.scss */
+.btn-secondary:active {
+  box-shadow: 0px 3px 12px -6px #757575;
 }
 
-/* line 120, ../scss/_main_styles.scss */
+/* line 141, ../scss/_main_styles.scss */
+.btn-success {
+  color: #FFFFFF;
+  background-color: #000000;
+  border-color: #000000;
+}
+/* line 119, ../scss/_main_styles.scss */
+.btn-success:hover, .btn-success:focus {
+  color: #FFFFFF;
+  background-color: black;
+  border-color: #000000;
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+/* line 128, ../scss/_main_styles.scss */
+.btn-success:active {
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+
+/* line 145, ../scss/_main_styles.scss */
+.btn-info {
+  color: #FFFFFF;
+  background-color: #757575;
+  border-color: #757575;
+}
+/* line 119, ../scss/_main_styles.scss */
+.btn-info:hover, .btn-info:focus {
+  color: #FFFFFF;
+  background-color: #6d6d6d;
+  border-color: #757575;
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+/* line 128, ../scss/_main_styles.scss */
+.btn-info:active {
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+
+/* line 149, ../scss/_main_styles.scss */
+.btn-warning {
+  color: #202020;
+  background-color: #FFFFFF;
+  border-color: #757575;
+}
+/* line 119, ../scss/_main_styles.scss */
+.btn-warning:hover, .btn-warning:focus {
+  color: #202020;
+  background-color: #f7f7f7;
+  border-color: #757575;
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+/* line 128, ../scss/_main_styles.scss */
+.btn-warning:active {
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+
+/* line 153, ../scss/_main_styles.scss */
+.btn-danger {
+  color: #202020;
+  background-color: #cfb87c;
+  border-color: #cfb87c;
+}
+/* line 119, ../scss/_main_styles.scss */
+.btn-danger:hover, .btn-danger:focus {
+  color: #202020;
+  background-color: #cbb271;
+  border-color: #cfb87c;
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+/* line 128, ../scss/_main_styles.scss */
+.btn-danger:active {
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+
+/* line 157, ../scss/_main_styles.scss */
+.btn-link {
+  color: #007BC8;
+  background-color: transparent;
+  border-color: transparent;
+}
+/* line 119, ../scss/_main_styles.scss */
+.btn-link:hover, .btn-link:focus {
+  color: #007BC8;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+/* line 128, ../scss/_main_styles.scss */
+.btn-link:active {
+  box-shadow: 0px 3px 12px -6px #757575;
+}
+
+/* line 162, ../scss/_main_styles.scss */
 .page-header span {
   font-family: "Neue Helvetica W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

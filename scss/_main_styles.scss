@@ -10,6 +10,10 @@ body {
   }
 }
 
+a:link, a:visited, a {
+  color: $link_blue;
+}
+
 // Literally too lazy to track this down. Deal with it.
 .toolbar-menu > li > a:visited {
   color: #565656 !important;
@@ -67,7 +71,7 @@ header {
   line-height: 64px;
   font-weight: 600;
   border-right: 1px solid $gray;
-  padding: 0 12px;
+  padding: 0;
 
   &:link {
     background-color: $real_white;
@@ -107,13 +111,51 @@ section {
 }
 
 // BUTTONS
-.btn-primary {
-  color: $text_white;
-  background-color: $cugold;
-  border-color: $cugold;
+@mixin btn($textcolor, $backgroundcolor, $bordercolor) {
+  color: $textcolor;
+  background-color: $backgroundcolor;
+  border-color: $bordercolor;
+
+  &:hover,
+  &:focus {
+    color: $textcolor;
+    background-color: darken($backgroundcolor, 3%);
+    border-color: $bordercolor;
+    //text-shadow: 0.5px 0.5px 20px $bg_dark1;
+    box-shadow: 0px 3px 12px -6px $gray;
+  }
+
+  &:active {
+    box-shadow: 0px 3px 12px -6px $gray;
+  }
 }
-.btn:focus,.btn:active {
-  outline: none !important;
+
+.btn-primary {
+  @include btn($text_white, $link_blue, $link_blue);
+}
+
+.btn-secondary {
+  @include btn($text_black, $cugold, $cugold);
+}
+
+.btn-success {
+  @include btn($text_white, $real_black, $real_black);
+}
+
+.btn-info {
+  @include btn($text_white, $gray, $gray);
+}
+
+.btn-warning {
+  @include btn($text_black, $real_white, $gray);
+}
+
+.btn-danger {
+  @include btn($text_black, $cugold, $cugold);
+}
+
+.btn-link {
+  @include btn($link_blue, transparent, transparent);
 }
 
 // FONT TEXT WORDS ETC.
